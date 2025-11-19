@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReadyHome • Plan</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#8b0000">
+</head>
+<body>
+  <header><h1>Build My Plan</h1></header>
+  <div class="wrap">
+    <div class="card">
+      <div class="section-title">Household Basics</div>
+      <label>Home Address
+        <input id="addr" placeholder="123 Main St, City, ST">
+      </label>
+      <label>Household Members
+        <textarea id="members" placeholder="Names, phone, email"></textarea>
+      </label>
+      <label>Hazards (Ctrl / ⌘ + click to select multiple)</label>
+      <select id="haz" multiple>
+        <option>Wildfire</option>
+        <option>Earthquake</option>
+        <option>Flood</option>
+        <option>Storm</option>
+        <option>Power Outage</option>
+        <option>Shelter-in-Place</option>
+        <option>Extreme Heat</option>
+        <option>Landslide</option>
+        <option>Volcano</option>
+        <option>Tsunami</option>
+        <option>HazMat</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Shelter-in-Place Checklist</div>
+      <ul class="checklist">
+        <li><label><input type="checkbox" id="sip_windows"> Close and lock all windows and doors</label></li>
+        <li><label><input type="checkbox" id="sip_hvac"> Turn off HVAC, swamp coolers, window units</label></li>
+        <li><label><input type="checkbox" id="sip_seal"> Seal gaps (towels, tape, etc.)</label></li>
+        <li><label><input type="checkbox" id="sip_water"> 72+ hours of water ready</label></li>
+        <li><label><input type="checkbox" id="sip_food"> 72+ hours of non-perishable food</label></li>
+        <li><label><input type="checkbox" id="sip_light"> Flashlights / headlamps & spare batteries</label></li>
+        <li><label><input type="checkbox" id="sip_power"> Charged power banks / backup power</label></li>
+        <li><label><input type="checkbox" id="sip_meds"> 3–7 days of medications accessible</label></li>
+        <li><label><input type="checkbox" id="sip_pets"> Pet food / crates / supplies</label></li>
+        <li><label><input type="checkbox" id="sip_masks"> N95 / masks for smoke / poor air</label></li>
+      </ul>
+      <label>Notes
+        <textarea id="sip_notes" placeholder="Room you will shelter in, sealing plans, special needs, etc."></textarea>
+      </label>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Emergency Contacts</div>
+      <label>Out-of-Area Contact
+        <input id="c_outside" placeholder="Name & phone">
+      </label>
+      <label>Local Emergency Contact
+        <input id="c_local" placeholder="Name & phone">
+      </label>
+      <label>Power Company / Utility
+        <input id="c_utility" placeholder="Company & phone">
+      </label>
+      <label>Doctor / Clinic
+        <input id="c_doctor" placeholder="Name & phone">
+      </label>
+      <label>Veterinarian
+        <input id="c_vet" placeholder="Clinic & phone">
+      </label>
+      <label>Trusted Neighbor
+        <input id="c_neighbor" placeholder="Name & phone">
+      </label>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Household Inventory (Quick)</div>
+      <label>High-value items / serial numbers / photos on file
+        <textarea id="inv_notes" placeholder="Example: TVs, computers, tools, appliances, jewelry, safe contents, etc."></textarea>
+      </label>
+    </div>
+
+    <div class="card">
+      <div class="section-title">My Maps & Routes</div>
+      <p class="muted">Use this for notes about evacuation routes or map files you keep on your device (PDFs, images, etc.).</p>
+      <label>Map / Route Notes
+        <textarea id="map_notes" placeholder="Example: Evac route via Hwy 41; backup via Road 422; gate codes; water sources, etc."></textarea>
+      </label>
+    </div>
+
+    <div class="card no-print">
+      <div class="grid">
+        <button class="btn" id="save">Save</button>
+        <button class="btn" id="load">Load</button>
+        <button class="btn" id="pdf">Export PDF</button>
+        <a class="btn" href="index.html">Back</a>
+      </div>
+      <p class="muted" id="status"></p>
+    </div>
+  </div>
+  <script type="module" src="plan.js"></script>
+</body>
+</html>
