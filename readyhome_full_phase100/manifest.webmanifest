@@ -1,9 +1,0 @@
-{
-  "name": "ReadyHome (Private)",
-  "short_name": "ReadyHome",
-  "start_url": "gate.html",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#8b0000",
-  "icons": []
-}
