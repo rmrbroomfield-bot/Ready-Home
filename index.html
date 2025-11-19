@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReadyHome</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#8b0000">
+  <script>
+    if(!sessionStorage.getItem('readyhome_ok')){ location.replace('gate.html'); }
+  </script>
+</head>
+<body>
+  <header><h1>ReadyHome • All-Hazards Planner</h1></header>
+  <div class="wrap grid">
+    <div class="card">
+      <h2>Build My Plan</h2>
+      <p>Household info, hazards, shelter-in-place, inventory, contacts, routes, PDF export.</p>
+      <a class="btn primary" href="plan.html">Open</a>
+    </div>
+    <div class="card">
+      <h2>Nearby Incidents</h2>
+      <p>View sample wildfire incidents (demo data). Live feeds can be wired in later.</p>
+      <a class="btn" href="incidents.html">Open</a>
+    </div>
+    <div class="card">
+      <h2>Alerts & Zones</h2>
+      <p>Save an alert address and see a simulated evacuation zone status.</p>
+      <a class="btn" href="alerts.html">Open</a>
+    </div>
+  </div>
+  <footer>
+    <small>ReadyHome Phase 1 • 2025-11-19</small>
+  </footer>
+  <script>
+    if('serviceWorker' in navigator){
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+  </script>
+</body>
+</html>
