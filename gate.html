@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReadyHome • Private Access</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header><h1>ReadyHome • Private Access</h1></header>
+  <div class="wrap">
+    <div class="card">
+      <p>This build is private. Enter the access code to continue.</p>
+      <label>Access Code
+        <input id="code" type="password" placeholder="••••••">
+      </label>
+      <div class="grid">
+        <button class="btn primary" id="go">Enter</button>
+        <button class="btn" id="hint">Hint</button>
+      </div>
+      <p class="muted" id="msg"></p>
+    </div>
+  </div>
+  <script type="module" src="gate.js"></script>
+</body>
+</html>
